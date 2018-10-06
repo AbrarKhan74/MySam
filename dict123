@@ -1,0 +1,35 @@
+dect = dict()
+class user():
+    def register(self):
+        print("Enter your name:")
+        name=input()
+        phno=int(input("Enter phone numbe:"))
+        addr=input("Enter addres:")
+        user.paswd(self)
+        dect["name"]=name
+        dect["phno"]=phno
+        dect["addr"]=addr
+    def paswd(self):
+        pass1=input("Enter passwd:")
+        pass2=input("Confirm Password:")
+        if pass1!=pass2:
+            print("Password does not match Enter Onse again")
+            user.paswd(self)
+        dect["pass1"]=pass1
+        dect["pass2"]=pass2
+        print("Register sucessful")
+
+    def login(self):
+        name=input("Enter user name:")
+        pass1=input("Enter password:")
+        if dect["name"]==name and dect["pass1"]==pass1:
+            print("login successful")
+            user.display(self)
+    def display(self):
+        print("pass1 \t pass2 \t name \t phone \t address")
+        for key in dect:
+            print (dect[key], end=" \t ")
+
+obj=user()
+obj.register()
+obj.login()
