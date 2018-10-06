@@ -24,11 +24,14 @@ class user():
         pass1=input("Enter password:")
         if dect["name"]==name and dect["pass1"]==pass1:
             print("login successful")
+            print("Enter Option")
             user.display(self)
     def display(self):
-        print("pass1 \t pass2 \t name \t phone \t address")
         for key in dect:
-            print (dect[key], end=" \t ")
+            print (key, end=" \t ")
+        print()
+        for key in dect:
+            print(dect[key],end=" \t ")
 
 obj=user()
 obj.register()
